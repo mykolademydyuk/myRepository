@@ -54,7 +54,7 @@ class Division : IOperation
             if (Double.IsNaN(variable_2) || variable_2 == 0)
             {
                 Console.WriteLine("Warning!.Variable 2 was emty or zero.By default it was taken one");
-                variable_2 = 0;
+                variable_2 = 1;
             }
         }
 
