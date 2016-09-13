@@ -1,4 +1,6 @@
-private readonly int my_opp_id;
+class OperationTemplate: IOperation
+    {
+        private readonly int my_opp_id;
         private float current_status;
 
         public OperationTemplate()
@@ -62,3 +64,4 @@ private readonly int my_opp_id;
 
             return (double)operation(variable_1,variable_2);
         }
+}
