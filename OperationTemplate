@@ -1,9 +1,7 @@
-class Minus: IOperation
-    {
-        private readonly int my_opp_id;
+private readonly int my_opp_id;
         private float current_status;
 
-        public Minus()
+        public OperationTemplate()
         {
             my_opp_id = int.MaxValue;
             current_status = float.NaN;
@@ -38,12 +36,12 @@ class Minus: IOperation
             if (Double.IsNaN(variable_1))
             {
                 Console.WriteLine("Warning!. Variable 1 was emty. By default it was taken zero");
-                variable_1 = 0;
+                variable_1 = double.NaN;
             }
             if (Double.IsNaN(variable_2))
             {
                 Console.WriteLine("Warning!. Variable 2 was emty. By default it was taken zero");
-                variable_2 = 0;
+                variable_2 = double.NaN;
             }
         }
 
@@ -55,13 +53,12 @@ class Minus: IOperation
         private object operation(object variable_1, object variable_2)
         {
             current_status = 1;
-            return (double)variable_1 - (double)variable_2;
+            return null;
         }
 
         private double getResult()
         {
             data_validation();
 
-            return (double)operation(variable_1, variable_2);
+            return (double)operation(variable_1,variable_2);
         }
-    }
